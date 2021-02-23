@@ -1,0 +1,708 @@
+:root {
+    --color-black: #232424;
+    --color: #deb887;
+}
+ 
+@font-face {
+    font-family: "RADIKAL-LIGHT";
+    src: url("/POLICE/Radikal-Light.otf");
+}
+@font-face {
+    font-family: "RADIKAL-BLACK";
+    src: url("/POLICE/Radikal-Black.otf");
+}
+@font-face {
+    font-family: "RADIKAL-THIN";
+    src: url("/POLICE/Radikal-Thin.otf");
+}
+
+body{
+    margin: 0px;
+    background-color: #fffdfc;
+    background-image: url(SRC/debut-light.png); 
+}
+
+
+a{
+  text-decoration: none;
+  color:  var(--color-black);
+}
+
+/* NAVBAR */
+
+#navbar{
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  width: 90vw;
+  top: 5vh;
+  left: 5vw;
+  background-color: var(--color);
+  opacity: 0;
+  animation: fadeInTop 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
+  border-radius: 40px;
+  font-family: "RADIKAL-LIGHT";
+  justify-content: space-around;
+}
+#navbar ul{
+  display: flex;
+  width: 100vw;
+  list-style: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar_categorie{
+  color: #ffffff;
+  width: auto;
+  align-items: center;
+  position: relative;
+  letter-spacing: 0.3em;
+  justify-content: center;
+  font-weight: 400;
+}
+.picto_home{
+  position: relative;
+  display: flex;
+  width: 20px;
+  align-items: center;
+  right: 6px;
+  justify-content: center;
+}
+
+/* PROJECTS */
+
+#container-fullhome{
+    position: relative;
+    font-family: "RADIKAL-BLACK";
+    text-transform: uppercase;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.2em;
+}
+.container-name{
+    font-size: 6vh;
+    text-align: right;
+    letter-spacing: 0.2em;
+    width: 48%;
+    margin-right: 2%;
+    opacity: 0;
+    animation: fadein 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+.container-label-and-see-project{
+    width: 48%;
+    margin-left: 1%;
+    height: 200px;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-laber{
+    font-size: 3vh;
+    font-style: italic;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    animation: fadeInUp 1s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.button-see-project{
+  width: 20px;
+  margin-right: 15px;
+}
+.container-see-project{
+  font-family: "RADIKAL-LIGHT";
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  color: var(--color);
+  width: 100%;
+  float: left;
+  padding-top: 20px;
+  opacity: 0;
+  animation: fadeInLeft 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
+}
+.container-see-project:onclick{
+  font-family: "RADIKAL-LIGHT";
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  color: var(--color);
+  width: 100%;
+  float: left;
+  padding-top: 20px;
+  opacity: 0;
+  animation: goDown 4s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes goDown {
+  from {
+      top:0vh;
+  }
+  to {
+      top:90vh;
+  }
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,60px,0);
+      opacity:0;
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+@keyframes fadeInTop {
+  from {
+      transform: translate3d(0,-60px,0);
+      opacity:0;
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+@keyframes fadeInLeft {
+  from {
+      transform: translate3d(100px,0,0);
+      opacity:0;
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+@keyframes fadeInRight {
+  from {
+      transform: translate3d(-100px,0,0);
+      opacity:0;
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1;
+  }
+}
+
+
+
+
+/* CAROUSEL */
+#container{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.number__projet{
+  position: absolute;
+  z-index: -100;
+  margin-left: 25%;
+  top: -13vh;
+  font-family: "RADIKAL-BLACK";
+  font-size: 11vw;
+  color: #c0b6af38;
+  mix-blend-mode: luminosity;
+}
+.name__projet{
+  position: absolute;
+  z-index: 10;
+  width: 30%;
+  text-align: right;
+  top: 35%;
+  font-weight: 800;
+  margin-left: 10%;
+  letter-spacing: 0.2em;
+  font-family: "RADIKAL-BLACK";
+  font-size: 3.5vw;
+  color: var(--color);
+  line-height: normal;
+  letter-spacing: 10px;
+  transition: transform .2s;
+}
+  .cta__projet{
+  position: absolute;
+  z-index: 10;
+  margin-left: 23vw;
+  text-transform: uppercase;
+  margin-top: -5%;
+  font-family: "RADIKAL-LIGHT";
+  font-size: 0.8vw;
+  color: var(--color-black);
+  transition: all 0.6s;
+}
+.cta__projet:before {
+  content: "";
+  width: 0;
+  height: 0.15em;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background: var(--color-black);
+  transition: all 0.3s;
+}
+.cta__projet:hover:before {
+  width: 95%;
+  left: 0;
+  background: var(--color);
+}
+
+
+/* A - P R O P O S */
+
+#container__about{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#contenu__about{
+  position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.title__about{
+  width: auto;
+  font-size: 40px;
+  font-family: "RADIKAL-BLACK";
+  letter-spacing: 10px;
+}
+.underline__about{
+  position: relative;
+  right: -3%;
+  height: 3px;
+  width: 140px;
+  background-color: var(--color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.description__about{
+  width: 90%;
+  font-family: "RADIKAL-LIGHT";
+  font-size: 14px;
+  letter-spacing: 1.1;
+}
+#contenu__skills{
+  position: relative;
+  display: flex;
+  width: 50%;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.encart__skill{
+  border : solid 5px var(--color);
+  padding: 30px 20px;
+  width: auto;
+  margin: 2%;
+  width: auto;
+}
+.title__skill{
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-family: "RADIKAL-BLACK";
+}
+.underline__skill{
+  position: relative;
+  z-index: 5;
+  top: 12px !important;
+  height: 3px;
+  width: 20%;
+  background-color: var(--color);
+}
+.description__skill{
+  margin-top: 30px;
+  font-size: 0.8rem;
+  font-family: "RADIKAL-LIGHT";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2rem;
+}
+.listing__skill{
+  font-size: 0.6rem;
+  letter-spacing: 1.5;
+  font-family: "RADIKAL-BLACK";
+  text-transform: uppercase;
+  color: var(--color);
+  line-height: 0.9rem;
+}
+
+
+
+/* ---------------- E M P L O I ------------------ */
+#container__emploi{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+}
+#contenu__emploi{
+  position: relative;
+  width: 50%;
+  height: 70vh;
+  margin-left: auto;
+  margin-right: 10%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+}
+.contenu__emploi{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.title__emploi{
+  width: auto;
+  font-size: 40px;
+  font-family: "RADIKAL-BLACK";
+  letter-spacing: 10px;
+}
+.underline__emploi{
+  position: relative;
+  right: -3%;
+  height: 3px;
+  width: 140px;
+  background-color: var(--color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.description__emploi{
+  width: 60%;
+  font-family: "RADIKAL-LIGHT";
+  font-size: 14px;
+  letter-spacing: 1.1;
+}
+.cta__emploi{
+  width: auto;
+  margin-top: 30px;
+  border : solid 5px var(--color);
+  padding: 15px 20px;
+  font-family: "RADIKAL-BLACK";
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.cta__emploi:hover{
+  width: auto;
+  margin-top: 30px;
+  border : solid 5px var(--color);
+  padding: 15px 20px;
+  color: var(--color); 
+  font-family: "RADIKAL-BLACK";
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.img__emploi{
+  position: relative;
+  height: 100%;
+  margin-right: 0px;
+}
+
+
+
+/* ---------------- F O O T E R ------------------ */
+footer{
+  width: 100%;
+  height: auto;
+  background-color: var(--color);
+  z-index: -1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.word__end{
+  width: auto;
+  padding: 120px 0px;
+  font-size: 50px;
+  font-family: "RADIKAL-BLACK";
+  letter-spacing: 10px;
+}
+.mention__footer{
+  font-size: 10px;
+  font-family: "RADIKAL-LIGHT";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+
+@media all and (max-width: 1024px){
+  #container-fullhome{
+    position: relative;
+    font-family: "RADIKAL-BLACK";
+    text-transform: uppercase;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.2em;
+}
+.container-name{
+  font-size: 6vh;
+  text-align: center;
+  letter-spacing: 0.2em;
+  width: 100%;
+  margin-left: 1%;
+  opacity: 0;
+  animation: fadein 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.container-label-and-see-project{
+  width: 50%;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 1%;
+}
+.container-laber{
+  font-size: 2vh;
+  text-align: center;
+  font-style: italic;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  animation: fadeInUp 1s;
+  animation-delay: 2s;
+  margin-left: 8%;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.button-see-project{
+width: 20px;
+margin-right: 15px;
+}
+.container-see-project{
+font-family: "RADIKAL-LIGHT";
+font-weight: 500;
+font-style: italic;
+text-align: center;
+display: flex;
+color: var(--color);
+width: 30vw;
+margin-left: 10%;
+padding-top: 50px;
+opacity: 0;
+animation: fadeInLeft 1s;
+animation-fill-mode: forwards;
+animation-delay: 2.5s;
+}
+.container-see-project:onclick{
+font-family: "RADIKAL-LIGHT";
+font-weight: 500;
+font-style: italic;
+display: flex;
+align-items: center;
+color: var(--color);
+width: 100vw;
+padding-top: 20px;
+opacity: 0;
+animation: goDown 4s;
+animation-fill-mode: forwards;
+animation-delay: 2.5s;
+}
+
+
+  #container__about{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #contenu__about{
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+  .underline__about{
+    position: relative;
+    right: 1%;
+    height: 3px;
+    width: 140px;
+    background-color: var(--color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .description__about{
+    width: 90%;
+    font-family: "RADIKAL-LIGHT";
+    font-size: 14px;
+    letter-spacing: 1.1;
+
+  }
+  #contenu__skills{
+    position: relative;
+    display: flex;
+    width: 95%;
+    margin-top: 50px;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .encart__skill{
+    border : solid 5px var(--color);
+    padding: 30px 20px;
+    width: auto;
+    margin: 2%;
+    width: 42%;
+  }
+
+
+
+  #container__emploi{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  
+  }
+  #contenu__emploi{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: 0%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .contenu__emploi{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+  }
+  .underline__emploi{
+    position: relative;
+    right: 0%;
+    height: 3px;
+    width: 140px;
+    background-color: var(--color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .img__emploi{
+    position: relative;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    margin-right: 0px;
+  }
+
+
+  .number__projet{
+    position: absolute;
+    z-index: -100;
+    width: auto;
+    top: -10vh;
+    margin-left: 43%;
+    font-family: "RADIKAL-BLACK";
+    font-size: 11vw;
+    color: #c0b6af38;
+    mix-blend-mode: luminosity;
+  }
+  .name__projet{
+    position: absolute;
+    z-index: 10;
+    width: 30%;
+    text-align: right;
+    top: -20%;
+    font-weight: 900;
+    margin-left: 30%;
+    letter-spacing: 0.2em;
+    font-family: "RADIKAL-BLACK";
+    font-size: 4vw;
+    color: var(--color);
+    line-height: normal;
+    letter-spacing: 10px;
+    transition: transform .2s;
+  }
+    .cta__projet{
+    position: absolute;
+    z-index: 10;
+    margin-left: 42%;
+    text-transform: uppercase;
+    margin-top: 3%;
+    font-family: "RADIKAL-LIGHT";
+    font-size: 1.4vw;
+    color: var(--color-black);
+    transition: all 0.6s;
+    border : solid 5px var(--color);
+    padding: 15px 20px;
+  }
+  .cta__projet:before {
+    content: "";
+    width: 0;
+    height: 0.15em;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background: var(--color-black);
+    transition: all 0.3s;
+  }
+  .cta__projet:hover:before {
+    width: 95%;
+    left: 0;
+    background: var(--color);
+  }
+  
+}
