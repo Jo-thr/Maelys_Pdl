@@ -1,0 +1,19 @@
+.home{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    h1 {
+        position: relative;
+        top: 30vh;
+        z-index: 50;
+        font-family: $font-1;
+        font-size: 4rem;
+        letter-spacing: .5rem;
+        color: $color-white;
+    }
+
+}

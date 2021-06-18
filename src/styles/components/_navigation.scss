@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    font-family: $font-2;
+
+    .nav-logo {
+        width: 50px;
+    }
+  
+    ul {
+        display: flex;
+        width: auto;
+
+        li {
+            padding: 8px 30px;
+            margin: 0 30px;
+            border-top: solid 4px $color-bg;
+            border-bottom: solid 4px $color-bg;
+        }
+
+    }
+
+    .nav-contact{
+        background-color: $color-bg;
+        font-weight: 800;
+    }
+    .nav-menu {
+        color: $color-bg;
+    }
+  }
